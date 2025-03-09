@@ -1,0 +1,6 @@
+.d-flex{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px;
+}

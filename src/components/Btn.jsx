@@ -13,9 +13,8 @@ function Btn(props) {
         color: 'orange',
         margin: '5px',
         fontSize: 20
-   }}>
-    {props.title ? props.title : "Click"}
-   </button>
+   }}
+    onClick={props.container}>{props.title ? props.title : "Click Me"}</button>
   )
 }
 

@@ -1,58 +1,55 @@
 import React from 'react';
 import Btn from './Btn';
 
-const Card = ({title , address , description , image}) => {
+const Card = ({title, image, price, address, }) => {
   const cardStyle = {
-    border: '1px solid #ddd',
-    borderRadius: '8px',
+    border: "1px solid silver",
+    borderRadius: "8px", 
     width: '250px',
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    boxShadow: '0 4px 8px rgba(38, 38, 38, 0.1)',
     padding: '16px',
     textAlign: 'center',
-    backgroundColor: '#fff',
-  };
+    backgroundColor: 'white'
+}
 
-  const imageStyle = {
+const imageStyle = {
     width: '100%',
     borderRadius: '8px',
     marginBottom: '16px'
-  };
+};
   
+return (
+  <>
+      <div style={cardStyle}>
+          <img 
+              src={image}
+              alt="placeholder"
+              style={imageStyle}
+          />
 
-  return (
-    <>
+         <div style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center"
+          }}>
 
+              <h3>Rs: {price}/=</h3>
+              <i class="fa-regular fa-heart"></i>
+         
+          </div>
 
-    <div style={{
-        marginTop: '20px'
-    }}>
-        <div style={cardStyle}>
-            <div>
-                <img 
-                    src={image} 
-                    alt="Placeholder" 
-                    style={imageStyle}
-                />
-
-            </div>
-            <div style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center'
-            }}>
-                <h3>{title}</h3>
-                <i class="fa-regular fa-heart"></i>
-            </div>
-            <div>
-            <p>{description}</p>
-            <h5>{address}</h5>
-            <Btn title="Buy Now !"/>
-
-            </div>
-        </div>
-
-    </div>
-    
+          <p class="flex-start"><b>Title:</b> {title}.</p>
+          <p class="flex-start"><b>Address:</b> {address}.</p>
+          {/* <p class="flex-start"><b>Date:</b> {PastTime}</p> */}
+          <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            textAlign:'border'
+          }}>
+            <Btn title="Buy Now"/>
+          </div>
+      </div>        
+  
 
     <script src="https://kit.fontawesome.com/70465652f7.js" crossorigin="anonymous"></script>
     </>
